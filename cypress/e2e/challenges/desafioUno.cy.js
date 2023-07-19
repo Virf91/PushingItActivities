@@ -16,7 +16,7 @@ describe('Primer desafo' , () => {
         cy.get('[name^="month"]').select('September');
         cy.get('[name^="ye"]').select(10);
         cy.get('[type$="mit"]').click();
-        cy.wait(5000)
+        cy.wait(6000);
         cy.get('#todolistlink').click();
         cy.get('#task').type('Retirar ropa de la lavandería');
         cy.get('button[type="submit"]').click();
