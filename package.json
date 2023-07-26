@@ -1,0 +1,15 @@
+{
+  "name": "pushing-activities",
+  "version": "1.0.0",
+  "description": "",
+  "main": "cypress.config.js",
+  "scripts": {
+    "test": "npx cypress open --e2e -b electron",
+    "staging": "npx cypress open --e2e -b electron --config baseUrl='https://pushing-it.vercel.app"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress-xpath": "^2.0.1"
+  }
+}

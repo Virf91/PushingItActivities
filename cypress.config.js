@@ -7,5 +7,6 @@ module.exports = defineConfig({
     },
     "baseUrl":'https://pushing-front.vercel.app/', // para usar la misma url para todo el test
     watchForFileChanges: false, // para que no se actualice cada vez que cambio algo
+    defaultCommandTimeout: 5000
   },
 });
