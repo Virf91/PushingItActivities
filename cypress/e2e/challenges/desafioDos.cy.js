@@ -31,7 +31,7 @@ beforeEach('', () => {
     cy.xpath('//input[@id="user"]').type(`pushingit`);
     cy.xpath('//input[@name="pass"]').type('123456!');
     cy.xpath('//button[@type="submit"]').click();
-    cy.xpath('//a[contains(@id , "todo")]').click()
+    cy.xpath('//a[contains(@id , "todo")]').click(); // revisar
 
 })
 it('Ingresar 5 tareas desde de un set de datos', () =>{
@@ -48,19 +48,18 @@ it('Ingresar 5 tareas desde de un set de datos', () =>{
 
 })
 it('Verificar que existan los botones “All”, “Completed”, “Active” y “Remove all”', () =>{
-    cy.xpath('//button[@type="button"]').clic();
-    cy.xpath('//button[@id="completed"]').clic();
-    cy.xpath('//button[@id="active"]').clic();
-    cy.xpath('//button[@id="removeAll"]').clic();
+    cy.get('#all').click();
+    cy.xpath('//button[@id="completed"]').click();
+    cy.xpath('//button[@id="active"]').click();
+    cy.xpath('//button[@id="removeAll"]').click();
 })
 it('Agregar 2 tareas, completarlas y eliminar la segunda tarea completada', () =>{
     cy.get('#task').type(datosDesafioDos.task1);
     cy.xpath('//div//child::button[@type="submit"]').click();
     cy.get('#task').type(datosDesafioDos.task2);
     cy.xpath('//div//child::button[@type="submit"]').click();
-    cy.xpath('//p[@id="5265"]').click();
-    cy.path('//p[@id="8703"]').click();
-    cy.get(':nth-child(2) > .css-vuy1kp > .chakra-button').clic();
+    cy.contains('p', "Pasear").click();
+    cy.get(':nth-child(2) > .css-vuy1kp > .chakra-button').click();
 })
 it('Agregar 2 tareas y eliminar la primera tarea', () =>{
     cy.get('#task').type(datosDesafioDos.task3);

@@ -8,7 +8,7 @@ describe("Actividad complementaria 3", () =>{
         cy.xpath('//input[@id="user"]').type(`pushingit`);
         cy.xpath('//input[@name="pass"]').type('123456!');
         cy.xpath('//button[@type="submit"]').click();
-        cy.xpath('//a[contains(@id , "todo")]').click()
+        cy.xpath('//a[contains(@id , "todo")]').click() // revisar si está ok
         cy.xpath('//input[starts-with(@name,"ta")]').type("tarea 1");
         cy.xpath('//button[text()="Send"]').click();
         cy.xpath('//p[text()="tarea 1"]').click();
